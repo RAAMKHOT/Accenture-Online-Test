@@ -44,9 +44,9 @@ dependencies {
     //RxJava
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     //Recyclarview
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03'
     //Card view
-    implementation 'androidx.cardview:cardview:1.0.0-beta01'
+    implementation 'androidx.cardview:cardview:1.0.0'
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
