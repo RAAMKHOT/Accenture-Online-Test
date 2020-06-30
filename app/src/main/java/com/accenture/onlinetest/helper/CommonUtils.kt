@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.accenture.onlinetest.network.RestClient
 import com.accenture.onlinetest.network.SOService
 
+//APK PAth : D:\POCs\AccentureOnlineTest\app\build\outputs\apk\debug
 object CommonUtils {
     val BASE_URL = "https://dl.dropboxusercontent.com"
     fun getSOService(): SOService {
