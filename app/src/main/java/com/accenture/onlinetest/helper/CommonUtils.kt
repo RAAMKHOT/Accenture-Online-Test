@@ -19,7 +19,7 @@ object CommonUtils {
             message, Toast.LENGTH_SHORT
         ).show()
     }
-
+    //checking the internet connection using System services
     fun isNetworkAvailable(context: Context): Boolean {
         val connectivity = context
             .getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

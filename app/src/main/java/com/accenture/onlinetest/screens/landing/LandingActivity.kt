@@ -9,6 +9,7 @@ import com.accenture.onlinetest.helper.CommonUtils
 import com.accenture.onlinetest.models.Base
 import com.accenture.onlinetest.models.Rows
 import kotlinx.android.synthetic.main.activity_landing.*
+import java.util.*
 
 class LandingActivity : AppCompatActivity(), LandingView {
     private lateinit var factListAdapter: FactsListAdapter
@@ -62,6 +63,7 @@ class LandingActivity : AppCompatActivity(), LandingView {
             swipeToRefresh.isRefreshing = false
         }
     }
+
 
     private fun checkNetworkStatus(){
         if(CommonUtils.isNetworkAvailable(this)){
