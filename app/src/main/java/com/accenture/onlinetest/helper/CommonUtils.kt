@@ -1,6 +1,8 @@
 package com.accenture.onlinetest.helper
 
 import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.widget.Toast
 import com.accenture.onlinetest.network.RestClient
 import com.accenture.onlinetest.network.SOService
@@ -16,5 +18,21 @@ object CommonUtils {
             context,
             message, Toast.LENGTH_SHORT
         ).show()
+    }
+
+    fun isNetworkAvailable(context: Context): Boolean {
+        val connectivity = context
+            .getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (connectivity != null) {
+            val info = connectivity.allNetworkInfo
+            if (info != null) {
+                for (i in info.indices) {
+                    if (info[i].state == NetworkInfo.State.CONNECTED) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
     }
 }

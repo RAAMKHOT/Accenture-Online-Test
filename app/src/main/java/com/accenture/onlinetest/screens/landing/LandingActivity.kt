@@ -1,6 +1,7 @@
 package com.accenture.onlinetest.screens.landing
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.accenture.onlinetest.R
 import com.facebook.shimmer.ShimmerFrameLayout
@@ -18,6 +19,7 @@ class LandingActivity : AppCompatActivity(), LandingView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
         init()
+        checkNetworkStatus()
     }
 
     override fun init() {
@@ -58,6 +60,17 @@ class LandingActivity : AppCompatActivity(), LandingView {
         shimmerContainer.stopShimmerAnimation()
         if (swipeToRefresh.isRefreshing) {
             swipeToRefresh.isRefreshing = false
+        }
+    }
+
+    private fun checkNetworkStatus(){
+        if(CommonUtils.isNetworkAvailable(this)){
+            textViewNoInternetConnection.visibility= View.GONE
+            shimmer_view_container.visibility= View.VISIBLE
+        }else{
+            textViewNoInternetConnection.visibility= View.VISIBLE
+            shimmer_view_container.visibility= View.GONE
+
         }
     }
 }

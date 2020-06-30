@@ -9,6 +9,7 @@
         android:id="@+id/shimmer_view_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         shimmer:duration="1000">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -23,4 +24,12 @@
                 android:scrollbars="vertical" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:id="@+id/textViewNoInternetConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet connection"
+        android:layout_centerInParent="true"
+        />
 </RelativeLayout>
